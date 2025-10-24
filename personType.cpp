@@ -48,7 +48,7 @@ personType::personType() { // Default constructor
 }
 
 personType::~personType() { // Destructor
-    cout << "Destructor has been called" << endl;
+    //cout << "Destructor has been called" << endl;
 }
 
 
