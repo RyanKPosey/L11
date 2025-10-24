@@ -19,9 +19,9 @@ int main() {
     };
 
     vector<studentType> students = {
-        studentType("John", "Doe", 3.5, "Junior", "S12345"),
-        studentType("Jane", "Smith", 3.8, "Senior", "S67890"),
-        studentType("Alice", "Johnson", 3.2, "Sophomore", "S54321")
+        studentType("John", "Doe", 3.5, "S12345", "Junior"),
+        studentType("Jane", "Smith", 3.8, "S67890", "Senior"),
+        studentType("Alice", "Johnson", 3.2, "S54321", "Sophomore")
     };
  
 
