@@ -22,7 +22,6 @@ int main() {
     vector<personType> people = {
         personType("Justin", "Sandwich", "123 Main St", 30, "01/01/1993", 'M', 30),
         personType("Sally", "SmartyPants", "456 Elm St", 65, "05/26/1951", 'F', 72),
-        personType("Bob", "Sponge", "789 Oak St", 70, "02/15/1953", 'M', 70)
     };
 
     //print students
