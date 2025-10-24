@@ -1,8 +1,8 @@
 /*
     Programmer: Ryan Posey
-    Assignment: L10.D
-    Purpose: Practice using constructors
-    Due date: 10/16/2025
+    Assignment: L11
+    Purpose: Practice class inheritance
+    Due date: 10/23/2025
 */
 #ifndef PERSON_TYPE_H
 #define PERSON_TYPE_H
