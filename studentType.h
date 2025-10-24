@@ -27,6 +27,7 @@ public:
     void print() const;
     bool equals(const studentType&) const;
 
+    ~studentType();
 private:
     std::string id;
     double gpa;
