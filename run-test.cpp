@@ -1,3 +1,10 @@
+/*
+    Programmer: Ryan Posey
+    Assignment: L11
+    Purpose: Practice class inheritance
+    Due date: 10/23/2025
+*/
+
 #include <iostream>
 #include "studentType.h"
 #include <vector>
@@ -27,7 +34,7 @@ int main() {
     }
 
     // print people
-    
+
     for (size_t i = 0; i < people.size(); i++) {
         cout << "Person " << (i + 1) << ":" << endl;
         people[i].print();

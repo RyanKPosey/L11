@@ -1,3 +1,10 @@
+/*
+    Programmer: Ryan Posey (Code given in assignment)
+    Assignment: L11
+    Purpose: Practice class inheritance
+    Due date: 10/23/2025
+*/
+
 /**
  * @file studentType.cpp
  * @brief Implementation of the studentType class.
