@@ -1,8 +1,8 @@
 /*
-    Programmer: Ryan Posey (Template given in assignment)
+    Programmer: Ryan Posey
     Assignment: L11
     Purpose: Practice class inheritance
-    Due date: 10/23/2025
+    Due date: 10/29/2025
 */
 
 #ifndef STUDENT_TYPE_H

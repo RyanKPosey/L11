@@ -1,3 +1,10 @@
+/*
+    Programmer: Ryan Posey
+    Assignment: L11
+    Purpose: Practice class inheritance
+    Due date: 10/29/2025
+*/
+
 /**
  * @file professorType.h
  * @brief Declaration of the professorType class, a specialization of personType
