@@ -7,130 +7,83 @@
 
 #include "professorType.h"
 #include <iostream>
-using namespace std;
-
-/**
- * @file studentType.cpp
- * @brief Implementation of the studentType class.
- */
-
-#include "studentType.h"
-#include <iostream>
-#include <iomanip>
+#include <string>
 
 using namespace std;
 
 /**
- * @brief Default constructor.
- * @brief Traditional Style
+ * @brief Implementation of the professorType class.
  */
+
+// Default constructor
 professorType::professorType()
 {
-        //cout << "Default ProfessorType constructor called" << endl;
-        setEmployeeID("NOT SET");
-        setDepartment("NOT SET");
-        setDegree("NOT SET");
+    setEmployeeID("NOT SET");
+    setDepartment("NOT SET");
+    setDegree("NOT SET");
 }
 
-
-/**
- * @brief Constructor initializing first and last name.
- * @brief Style #2
- * @param first First name.
- * @param last Last name.
- */
-professorType::professorType(const string first, const string last)
-        : personType(first, last)
-{/** CODE BLOCK **/
-        //cout << getFirstName() << " " << "professorType constructor called" << endl;
-        setEmployeeID("NOT SET");
-        setDepartment("NOT SET");
-        setDegree("NOT SET");
-        setGPA(0.0);
-}
-
-
-professorType::professorType(const string first, const string last, const string addr, double heightIn, const string dob, char gender, unsigned age, const string employeeID, const string department, const string degree)
-        : personType(first, last, addr, heightIn, dob, gender, age)
+// Constructor with first and last name
+professorType::professorType(const std::string& first, const std::string& last)
+    : personType(first, last)
 {
-        setEmployeeID(employeeID);
-        setDepartment(department);
-        setDegree(degree);
-}
-        //cout << "First Name, Last Name, gpa, id, classification studentType constructor called" << endl;
+    setEmployeeID("NOT SET");
+    setDepartment("NOT SET");
+    setDegree("NOT SET");
 }
 
- 
-
-professorType::~professorType(){
-        //cout << "Inside professorType Destructor for: " << getFirstName() << endl;
+// Full constructor
+professorType::professorType(const std::string& first, const std::string& last,
+                           const std::string& addr, double heightIn,
+                           const std::string& dob, char gender, unsigned age,
+                           const std::string& employeeID,
+                           const std::string& department,
+                           const std::string& degree)
+    : personType(first, last, addr, heightIn, dob, gender, age)
+{
+    setEmployeeID(employeeID);
+    setDepartment(department);
+    setDegree(degree);
 }
-
 
 // Setters
-void professorType::setEmployeeID(const string id) {
-        employeeID = id;
+void professorType::setEmployeeID(const std::string& id) {
+    employeeID = id;
 }
 
-void professorType::setDepartment(const string dept) {
-        department = dept;
+void professorType::setDepartment(const std::string& dept) {
+    department = dept;
 }
 
-void professorType::setDegree(const string deg) {
-        degree = deg;
-}
-
-void professorType::setEmployeeID(const string ident) {
-        employeeID = ident;
-}
-
-void professorType::setDepartment(const string dept) {
-        department = dept;
+void professorType::setDegree(const std::string& deg) {
+    degree = deg;
 }
 
 // Getters
-string professorType::getEmployeeID() const {
-        return employeeID;
+std::string professorType::getEmployeeID() const {
+    return employeeID;
 }
 
-string professorType::getDepartment() const {
-        return department;
+std::string professorType::getDepartment() const {
+    return department;
 }
 
-string professorType::getDegree() const {
-        return degree;
+std::string professorType::getDegree() const {
+    return degree;
 }
 
-string professorType::getEmployeeID() const {
-        return employeeID;
-}
-
-string professorType::getDepartment() const {
-        return department;
-}
-
-string professorType::getDegree() const {
-        return degree;
-}
-
-/**
- * @brief Prints all data members, including those inherited.
- */
+// Print
 void professorType::print() const {
-        personType::print();
-        cout << "\tEmployee ID: " << employeeID << endl;
-        cout << "\tDepartment: " << department << endl;
-        cout << "\tDegree: " << degree << endl;
+    personType::print();
+    cout << "\tEmployee ID: " << employeeID << endl;
+    cout << "\tDepartment: " << department << endl;
+    cout << "\tDegree: " << degree << endl;
 }
 
-/**
- * @brief Compares two professorType objects for equality.
- * @param other The other professorType object.
- * @return true if all fields match, false otherwise.
- */
+// Equals
 bool professorType::equals(const professorType& other) const {
-        return personType::equals(other) &&
-                         employeeID == other.employeeID &&
-                         department == other.department &&
-                         degree == other.degree;
+    return personType::equals(other) &&
+           employeeID == other.employeeID &&
+           department == other.department &&
+           degree == other.degree;
 }
