@@ -50,4 +50,7 @@ int main() {
         professors[i].print();
         cout << endl;
     }
+
+    cout << "Professor 0 = Professor 1? " 
+         << std::boolalpha << professors[0].equals(professors[1]) << endl;
 }
