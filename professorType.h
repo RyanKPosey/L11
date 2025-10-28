@@ -23,6 +23,16 @@
  *                other person attributes (see personType documentation).
  * Postconditions: Objects of this type provide accessors and mutators for
  *                 employee-specific data: employeeID, department, degree.
+ *
+ * Class Invariants
+ * - The personType class invariants must hold for the inherited person
+ *   fields (see `personType` documentation), e.g. height in a sensible
+ *   range and age clamped to a reasonable upper bound.
+ * - `employeeID`, `department`, and `degree` are valid `std::string`
+ *   instances (they may hold sentinel values such as "NOT SET" but are
+ *   never left indeterminate).
+ * - Public methods do not leave the object in a state violating the above
+ *   invariants: constructors establish them and setters preserve them.
  */
 class professorType : public personType {
 public:

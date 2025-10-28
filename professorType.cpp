@@ -14,6 +14,17 @@ using namespace std;
 /**
  * @file professorType.cpp
  * @brief Implementation of the professorType class declared in professorType.h
+ *
+ * Class Invariants
+ * - The `personType` invariants apply for the inherited personal fields
+ *   (see `personType.h`), e.g. height is non-negative and age is within a
+ *   reasonable range.
+ * - `employeeID`, `department`, and `degree` are valid `std::string`
+ *   values and will contain either a meaningful value or the sentinel
+ *   "NOT SET"; they are never indeterminate.
+ * - Public member functions preserve these invariants: constructors
+ *   establish them and setters maintain or sanitize inputs so invariants
+ *   continue to hold after calls.
  */
 
 /**
