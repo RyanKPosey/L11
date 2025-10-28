@@ -9,19 +9,23 @@
 #include "studentType.h"
 #include <vector>
 #include "personType.h"
+#include "professorType.h"
 
 using namespace std;
 
 int main() {
     vector<personType> people = {
         personType("Justin", "Sandwich", "123 Main St", 30, "01/01/1993", 'M', 30),
-        personType("Sally", "SmartyPants", "456 Elm St", 65, "05/26/1951", 'F', 72),
     };
 
     vector<studentType> students = {
         studentType("John", "Doe", 3.5, "S12345", "Junior"),
         studentType("Jane", "Smith", 3.8, "S67890", "Senior"),
-        studentType("Alice", "Johnson", 3.2, "S54321", "Sophomore")
+    };
+
+    vector<professorType> professors = {
+        professorType("Alan", "Turing", "1 Computation Way", 72.0, "1912-06-23", 'M', 41, "E123", "CS", "PhD"),
+        professorType("Grace", "Hopper", "2 Programming Rd", 65.0, "1906-12-09", 'F', 85, "E456", "CS", "PhD")
     };
  
 
@@ -38,6 +42,12 @@ int main() {
     for (size_t i = 0; i < students.size(); i++) {
         cout << "Student " << (i + 1) << ":" << endl;
         students[i].print();
+        cout << endl;
+    }
+
+    for (size_t i = 0; i < professors.size(); i++) {
+        cout << "Professor " << (i + 1) << ":" << endl;
+        professors[i].print();
         cout << endl;
     }
 }
