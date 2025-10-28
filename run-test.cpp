@@ -24,8 +24,8 @@ int main() {
     };
 
     vector<professorType> professors = {
-        professorType("Alan", "Turing", "1 Computation Way", 72.0, "1912-06-23", 'M', 41, "E123", "CS", "PhD"),
-        professorType("Grace", "Hopper", "2 Programming Rd", 65.0, "1906-12-09", 'F', 85, "E456", "CS", "PhD")
+        professorType("Alan", "Turing", "1 Computation Way", 72.0, "1912-06-23", 'M', 41, "123456789", "Computer Science", "PhD"),
+        professorType("Grace", "Hopper", "2 Programming Rd", 65.0, "1906-12-09", 'F', 85, "246810124", "Computer Science", "PhD")
     };
  
 
