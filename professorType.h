@@ -266,7 +266,9 @@ public:
     bool equals(const professorType&) const;
 
 private:
-    std::string employeeID, department, degree;
+    std::string employeeID; ///< Employee identifier (may be "NOT SET")
+    std::string department; ///< Department name or code
+    std::string degree;     ///< Highest degree held (e.g., "PhD")
 };
 
 #endif // PROFESSOR_TYPE_H

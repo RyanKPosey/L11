@@ -11,14 +11,19 @@
 #include <string>
 #include <vector>
 
+/**
+ * \class personType
+ * \brief Represents a person with identity and basic demographics.
+ * \details Stores name, address, DOB, gender, height (inches), and age.
+ */
 class personType { 
-    std::string firstName_;
-    std::string lastName_;
-    std::string address_;
-    double height_inches_{};
-    std::string date_of_birth_;  
-    char gender_{}; 
-    uint16_t age_{};
+    std::string firstName_;    ///< First name (may be sentinel like "Not Set")
+    std::string lastName_;     ///< Last name (may be empty)
+    std::string address_;      ///< Postal address or sentinel string
+    double height_inches_{};   ///< Height in inches (clamped to [0.0, 120.0])
+    std::string date_of_birth_;///< Date of birth string (format application-defined)
+    char gender_{};            ///< Gender character (application-defined semantics)
+    uint16_t age_{};           ///< Age in years (clamped to [0,999])
 
 public:
     /**
@@ -112,9 +117,7 @@ public:
      * @post firstName_ and lastName_ are updated accordingly.
      */
     void setName(const std::string& name);               // accepts "First Last" (splits)
-    /**
-     * @brief Set the first name.
-     */
+    /** \brief Set first name. */
     void setFirstName(const std::string& firstName);
     /**
      * @brief Set the last name.
@@ -146,6 +149,7 @@ public:
      * @brief Return the full name as "First Last" (omits last if empty).
      */
     std::string getName() const;         // returns "First Last"
+    /** \brief Get first name. \return First name string. */
     std::string getFirstName() const;
     std::string getLastName() const;
     std::string getAddress() const;
