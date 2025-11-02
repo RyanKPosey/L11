@@ -5,21 +5,12 @@
     Due date: 10/29/2025
 */
 
-/**
- * @file studentType.cpp
- * @brief Implementation of the studentType class.
- */
-
 #include "studentType.h"
 #include <iostream>
 #include <iomanip>
 
 using namespace std;
 
-/**
- * @brief Default constructor.
- * @brief Traditional Style
- */
 studentType::studentType()
 {
         //cout << "Default StudentType constructor called" << endl;
@@ -29,12 +20,6 @@ studentType::studentType()
 }
 
 
-/**
- * @brief Constructor initializing first and last name.
- * @brief Style #2
- * @param first First name.
- * @param last Last name.
- */
 studentType::studentType(const string first, const string last)
         : personType(first, last)
 {/** CODE BLOCK **/
@@ -47,7 +32,7 @@ studentType::studentType(const string first, const string last)
 
 studentType::studentType(const string first, const string last, const double g, const string i, const string c)
         : personType(first, last)
-{/** CODE BLOCK **/
+{
         setID(i);
         setClassification(c);
         setGPA(g);
@@ -93,21 +78,12 @@ string studentType::getClassification() const {
         return classification;
 }
 
-/**
- * @brief Prints all data members, including those inherited.
- */
 void studentType::print() const {
         personType::print();
         cout << "\tID: " << id << endl;
         cout << "\tClassification: " << classification << endl;
         cout << "\tGPA: " << setprecision(2) << showpoint << gpa << endl;
 }
-
-/**
- * @brief Compares two studentType objects for equality.
- * @param other The other studentType object.
- * @return true if all fields match, false otherwise.
- */
 bool studentType::equals(const studentType& other) const {
         return personType::equals(other) &&
                          id == other.id &&
