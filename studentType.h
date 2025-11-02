@@ -149,9 +149,14 @@ public:
     ~studentType();
 
 private:
-    std::string id;           ///< Student identifier (may be "NOT SET")
-    double gpa;               ///< Grade point average in [0.0, 4.0]
-    std::string classification; ///< Student classification (e.g., "Freshman", "Senior")
+    /** \brief Student identifier (may be "NOT SET"). */
+    std::string id;
+
+    /** \brief Grade point average in [0.0, 4.0]. */
+    double gpa;
+
+    /** \brief Student classification (e.g., "Freshman", "Senior"). */
+    std::string classification;
 };
 
 #endif // STUDENT_TYPE_H

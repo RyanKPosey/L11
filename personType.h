@@ -17,13 +17,26 @@
  * \details Stores name, address, DOB, gender, height (inches), and age.
  */
 class personType { 
-    std::string firstName_;    ///< First name (may be sentinel like "Not Set")
-    std::string lastName_;     ///< Last name (may be empty)
-    std::string address_;      ///< Postal address or sentinel string
-    double height_inches_{};   ///< Height in inches (clamped to [0.0, 120.0])
-    std::string date_of_birth_;///< Date of birth string (format application-defined)
-    char gender_{};            ///< Gender character (application-defined semantics)
-    uint16_t age_{};           ///< Age in years (clamped to [0,999])
+    /** \brief First name (may be sentinel like "Not Set"). */
+    std::string firstName_;
+
+    /** \brief Last name (may be empty). */
+    std::string lastName_;
+
+    /** \brief Postal address or sentinel string. */
+    std::string address_;
+
+    /** \brief Height in inches (clamped to [0.0, 120.0]). */
+    double height_inches_{};
+
+    /** \brief Date of birth string (format application-defined). */
+    std::string date_of_birth_;
+
+    /** \brief Gender character (application-defined semantics). */
+    char gender_{};
+
+    /** \brief Age in years (clamped to [0,999]). */
+    uint16_t age_{};
 
 public:
     /**
